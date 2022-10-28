@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marketplace/launcher.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,10 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-          appBar: AppBar(
-        title: Text('Marketplace Tanaman'),
-      )),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: LauncherPage(),
     );
   }
 }
+
