@@ -1,3 +1,4 @@
+import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 
 class Beranda extends StatefulWidget {
@@ -55,7 +56,7 @@ class _BerandaState extends State<Beranda> {
                                 // height:20,
                                 width: 14,
                                 color: Color.fromARGB(138, 145, 215, 118))),
-                        hintText: "temukan tanaman yang anda inginkan",                   
+                        hintText: "temukan tanaman yang anda inginkan",
                         prefixIcon: IconButton(
                           icon: Icon(
                             Icons.search,
@@ -64,7 +65,7 @@ class _BerandaState extends State<Beranda> {
                           onPressed: () {},
                         ),
                         hintStyle: TextStyle(
-                            color: Color.fromRGBO(47, 85, 24, 1) ,
+                            color: Color.fromRGBO(47, 85, 24, 1),
                             fontSize: 12.0,
                             fontFamily: 'Roboto'),
                         filled: true,
@@ -75,6 +76,22 @@ class _BerandaState extends State<Beranda> {
                 ),
               ],
             ),
+            SizedBox(
+                height: 300,
+                width: double.infinity,
+                child: Carousel(
+                  dotSize: 6.0,
+                  dotSpacing: 15.0,
+                  dotPosition: DotPosition.bottomCenter,
+                  dotColor: Color.fromRGBO(166, 212, 141, 1),
+                  images: [
+                      Image.asset('assets/1.jpg', fit: BoxFit.cover,),
+                      Image.asset('assets/2.jpg', fit: BoxFit.cover,),
+                      Image.asset('assets/3.jpg', fit: BoxFit.cover,),
+                      Image.asset('assets/4.png', fit: BoxFit.cover,),
+                    ],
+                )
+           ),
           ],
         ),
       ),
